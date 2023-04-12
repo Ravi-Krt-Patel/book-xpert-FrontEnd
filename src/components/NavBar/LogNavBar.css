@@ -1,0 +1,113 @@
+#nav-container{
+	display: flex;
+	justify-content:space-around;
+	/* height: 130px; */
+	align-items: center;
+	position:sticky;
+	top: 0;
+	box-sizing: border-box;
+	z-index: 100;
+	padding: .5vw;
+	background-color: rgba(231, 255, 251,.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.nav-logo{
+	width: 12vw;
+	height: 5vw;
+	display: flex;
+	border-radius: 1.5vw;
+	text-align: center;
+	background-color: #07A189;
+	vertical-align: middle;
+	justify-content: center;
+	align-items: center;
+}
+.nav-search{
+	width: 30vw;
+	height: 3vw;
+	display: flex;
+	box-sizing: border-box;
+	margin:0;
+	padding: 0;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+.nav-search-button {
+	/* width: 12vw; */
+	/* height: 5vw; */
+	margin-left: 1vw;
+	display: flex;
+	text-align: center;
+	vertical-align: middle;
+	justify-content: center;
+	align-items: center;
+}
+.nav-searchAndbutton{
+	display: flex;
+	box-sizing: border-box;
+	display: flex;
+	text-align: center;
+	vertical-align: middle;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-project{
+	/* width: 12vw;
+	height: 5vw; */
+	display: flex;
+	text-align: center;
+	vertical-align: middle;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.nav-mail{
+	display: flex;
+	text-align: center;
+	vertical-align: middle;
+	justify-content: center;
+	align-items: center;
+	margin-left: 1vw;
+	/* margin-right: 1vw; */
+	
+}
+
+.nav-wishlist{
+	display: flex;
+	text-align: center;
+	vertical-align: middle;
+	justify-content: center;
+	align-items: center;
+	/* margin-left: 1vw; */
+	margin-right: 1vw;
+}
+
+.nav-profile{
+	/* width: 12vw; */
+	/* height: 5vw; */
+	display: flex;
+	text-align: center;
+	vertical-align: middle;
+	justify-content: center;
+	align-items: center;
+	
+	
+}
+
+.nav-project-message-profile{
+	display: flex;
+	justify-content:flex-end;
+	align-items: center;
+}
+
+
+@media (max-width: 768px) {
+	#nav-container{
+		display: none;
+	}
+}

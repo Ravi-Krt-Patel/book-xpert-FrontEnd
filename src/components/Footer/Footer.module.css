@@ -1,0 +1,229 @@
+.container {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Raleway", sans-serif;
+	background-color: #F0FAFF;
+	border: 1px solid #F0FAFF;
+  }
+  
+  .main {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 7.443vw;
+  } 
+  
+  .logobox {
+	width: 16.231vw;
+	margin-top: 7.838vw;
+  }
+  
+  .middlediv1 {
+	margin-top: 7.363vw;
+  }
+  
+  .middlediv1 p {
+	color: #6c6c6c;
+	font-size: 1.742vw;
+	margin-top: 1.188vw;
+	font-weight: 600;
+  }
+  
+  .middlediv1 > p:first-child {
+	margin-top: 0px;
+	color: black;
+	font-size: 2.059vw;
+	font-weight: 600;
+  }
+  
+  .middlediv2 {
+	margin-top: 7.363vw;
+  }
+  
+  .middlediv2 p {
+	color: #6c6c6c;
+	font-size: 1.742vw;
+	margin-top: 1.188vw;
+	font-weight: 600;
+  }
+  
+  .middlediv2 > p:first-child {
+	margin-top: 0px;
+	color: black;
+	font-size: 2.059vw;
+	font-weight: 600;
+  }
+  
+  .middlediv3 {
+	margin-top: 7.363vw;
+  }
+  
+  .middlediv3 p {
+	color: #6c6c6c;
+	font-size: 1.742vw;
+	margin-top: 1.188vw;
+	font-weight: 600;
+  }
+  
+  .middlediv3 > p:first-child {
+	margin-top: 0px;
+	color: black;
+	font-size: 2.059vw;
+	font-weight: 600;
+  }
+  
+  .logobox div {
+	background-color: #07a189;
+	width: 12.827vw;
+	height: 5.542vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1.188vw;
+  }
+  
+  .logobox div > p {
+	padding: 0.99vw 3.523vw;
+	font-weight: 600;
+	font-size: 2.375vw;
+	color: white;
+  }
+  
+  .logobox > p:last-child {
+	color: #6c6c6c;
+	font-weight: 600;
+	font-size: 1.742vw;
+	margin-top: 2.534vw;
+  }
+  
+  .lastdiv {
+	margin-top: 7.363vw;
+  }
+  
+  .lastdiv p {
+	font-weight: 600;
+	font-size: 2.059vw;
+	margin-top: 0px;
+	cursor: default;
+	color: black;
+  }
+  
+  .lastdiv > div > div {
+	background-color: black;
+	border-radius: 0.396vw;
+	width: 3.325vw;
+	height: 3.325vw;
+	color: white;
+	margin-right: 2.375vw;
+  }
+  
+  .lastdiv > div {
+	display: flex;
+	margin-top: 1.188vw;
+  }
+  
+  .mainMobile {
+	display: none;
+  }
+  
+  @media (max-width: 480px) {
+	.main {
+	  display: none; 
+	}
+  
+	.mobileContainer{
+	  background-color: #FFFFFF;
+	  border: 1px solid #FFFFFF;
+	  border-radius: 15px 15px 0px 0px;
+	}
+  
+	.mainMobile {
+	  display: block;
+	  width: 90%;
+	  margin: auto;
+	}
+  
+	.logobox {
+	  width: 59.583vw;
+	  margin-top: 13.75vw;
+	}
+	
+	.logobox div {
+	  background-color: #07a189;
+	  width: 27.083vw;
+	  height: 11.702vw;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  border-radius: 2.083vw;
+	  margin-bottom: 3.521vw;
+	}
+	
+	.logobox div > p {
+	  padding: 0.99vw 3.523vw; 
+	  font-weight: 600;
+	  font-size: 5.417vw;
+	  color: white;
+	}
+	
+	.logobox > p:last-child {
+	  color: #6c6c6c;
+	  font-weight: 600;
+	  font-size: 4.583vw;
+	  margin-top: 1.631vw;
+	  line-height: 7.292vw;
+	}
+	
+	.mobileMiddle{
+	  display: flex;
+	}
+  
+	.middlediv1{
+	  width: 37.917vw;
+	  margin-right: 4.583vw;
+	}
+	
+	.middlediv1 p {
+	  color: #6c6c6c;
+	  font-size: 3.75vw;
+	  margin-top: 5vw;
+	  font-weight: 600;
+	}
+	
+	.middlediv1 > p:first-child {
+	  margin-top: 0px;
+	  color: black;
+	  font-size: 4.583vw;
+	  font-weight: 600;
+	}
+  
+	.mobilelast{
+	  display: flex;
+	  margin-bottom: 13.75vw;
+	}
+  
+	.lastdiv p {
+	  font-weight: 600;
+	  font-size: 4.583vw;
+	  margin-top: 0px;
+	  cursor: default;
+	  color: black;
+	}
+	
+	.lastdiv > div > div {
+	  background-color: black;
+	  border-radius: 2.083vw;
+	  width: 7.152vw;
+	  height: 7.152vw;
+	  color: white;
+	  margin-right: 6.875vw;
+	}
+	
+	.lastdiv > div {
+	  display: flex;
+	  margin-top: 5.398vw;
+	}
+  
+  }
+  

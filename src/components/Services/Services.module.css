@@ -1,0 +1,43 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding:3vw;
+
+}
+.main{
+	padding:3vw;
+	padding-bottom: 0;
+}
+.mainHeading{
+	font-size:30px;
+	font-weight: bold;
+}
+.service{
+	width: 350px;
+	display: flex;
+	justify-content: space-between;
+	padding: 0vw;
+	margin:2vw;
+}
+
+.serviceRight{
+	width: 70%;
+}
+.serviceHeading{
+	font-size:20px;
+	font-weight: bold;
+	margin-bottom: .5vw;
+	color: rgb(112, 111, 111);
+}
+
+.serviceHeading:hover{
+	color:#6ab5fb;
+	
+}

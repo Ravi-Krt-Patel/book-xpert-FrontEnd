@@ -1,0 +1,31 @@
+.Sign-up-img{
+	width: 100%;
+	height: 95vh;
+	object-fit: fill;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding: 0;
+}
+
+.Main-Container{
+	background-color: #E7FFFB;
+	display: flex;
+	justify-content:space-between;
+}
+
+.AuthContainer{
+	background-color: #E7FFFB;
+	display: flex;
+	justify-content:space-between;
+}
+.AuthLeft{
+	width:40vw;
+	padding-left: 8vw;
+	padding-right: 8vw;
+
+}
+.AuthRight{
+	width:40vw;
+	height:100%;
+	
+}
