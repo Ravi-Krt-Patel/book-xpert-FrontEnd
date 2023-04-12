@@ -31,7 +31,7 @@ import {useState} from "react";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import PaymentIcon from "@mui/icons-material/Payment";
 import TemporaryDrawer from "./Drawer";
-
+import { useNavigate } from "react-router-dom";
 
 
 export const MobileNav = ()=>{
@@ -41,6 +41,17 @@ export const MobileNav = ()=>{
 	const  handleClose =()=>{
 		setAnchor(false)
 	}
+	const {
+		//  handleUserSignUp, 
+		userLoggedIn,
+		 handleLogin,handleSearch } = useContext(LoginContext);
+
+	const [text, setText] = useState("");
+	const handleText = (e)=>{
+		setText(e.target.value);
+	}
+	const navigate = useNavigate()
+
 	return (<>
 	<div className="Mob-container" >
 		<div className="container-child1" >
@@ -58,6 +69,8 @@ export const MobileNav = ()=>{
 		variant="outlined"
         id="input-with-icon-textfield"
         // label="TextField"
+		value={text}
+		onChange={handleText}
 		placeholder="enter blog name here..."
         InputProps={{
           endAdornment: (
@@ -66,7 +79,12 @@ export const MobileNav = ()=>{
 				cursor:'pointer',
 				fontSize:'30px',
 				color:'#05a0e8'
-			  }} />
+			  }}
+			  onClick={()=>{
+				handleSearch(text);
+				navigate("/blogs");
+			  }}
+			  />
             </InputAdornment>
           ),
         }}
