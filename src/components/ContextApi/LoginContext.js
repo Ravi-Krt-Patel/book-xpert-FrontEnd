@@ -13,13 +13,10 @@ export const LoginContextProvider = ({children})=>{
 
 
 
-	const [userDetail, setUserDetail] = useState({
-		userName:"",
-		contactNumber:"",
-		email:"",
-		country:"",
-		
-	});
+	const [search, setSearch] = useState("");
+	const handleSearch =(value)=>{
+		setSearch(value)
+	}
 
 
 
@@ -43,7 +40,7 @@ export const LoginContextProvider = ({children})=>{
 	}
 	return (
 		<LoginContext.Provider value={{handleLogin,loginData,forgetData,
-		resetData,handleforget,signUpData,handlereset,handleOTP,otpData,handleUserLogin,userLoggedIn,handleUserSignUp}} >
+		resetData,handleforget,signUpData,handlereset,handleOTP,otpData,handleUserLogin,userLoggedIn,handleUserSignUp,handleSearch,search}} >
 			{children}
 		</LoginContext.Provider>
 	)

@@ -11,21 +11,29 @@ import { useContext } from "react";
 import {LoginContext} from "../ContextApi/LoginContext";
 import "./LogNavBar.css";
 import { Outlet,Link } from "react-router-dom";
-
 import {LoginDrawer} from "./LoginDrawer";
-
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = ()=>{
+
+	const navigate = useNavigate();
+	const user = JSON.parse(localStorage.getItem("userDetail"));
+    const login = JSON.parse(localStorage.getItem("login"));
+
 	const {
 		//  handleUserSignUp, 
 		userLoggedIn,
-		 handleLogin } = useContext(LoginContext);
+		 handleLogin,handleSearch } = useContext(LoginContext);
 
 		 const scrollHandler = ()=>{
 			window.scrollTo(0,0);
 		  }
+	const [text, setText] = useState("");
+	const handleText = (e)=>{
+		setText(e.target.value);
+	}
 	
-	  
 
 	return (<>
 	<div className={style.container} >
@@ -43,6 +51,8 @@ const NavBar = ()=>{
 		variant="outlined"
         id="input-with-icon-textfield"
         // label="TextField"
+		value={text}
+		onChange={handleText}
 		placeholder="enter blog name here..."
         InputProps={{
           endAdornment: (
@@ -51,7 +61,12 @@ const NavBar = ()=>{
 				cursor:'pointer',
 				fontSize:'30px',
 				color:'#05a0e8'
-			  }} />
+			  }}
+			  onClick={()=>{
+				handleSearch(text);
+				navigate("/blogs")
+			  }}
+			   />
             </InputAdornment>
           ),
         }}
@@ -95,6 +110,16 @@ const NavBar = ()=>{
 				<div className={style.bar} ></div>
 			 </div>
 			</Link>
+
+			{login && user.role === 'admin'?(<Link to="/admin" style={{textDecoration: 'none'}} >
+			 <div className={style.item} onClick={scrollHandler} >
+			   <Button variant="text" sx={{
+					color:'#05529aeb'
+				}} >Admin</Button>
+				<div className={style.bar} ></div>
+			 </div>
+			</Link>):(<></>)}
+
 			
 			{userLoggedIn?(<div className={style.item} >
 				<LoginDrawer/>

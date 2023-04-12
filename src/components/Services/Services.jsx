@@ -9,9 +9,20 @@ import CheckIcon from '@mui/icons-material/Check';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import {Footer} from "../Footer/Footer";
+import { useEffect } from "react";
+import { useContext } from "react";
+import { LoginContext } from "../ContextApi/LoginContext";
 
 const Services = ()=>{
-
+ 
+	const user = JSON.parse(localStorage.getItem("userDetail"));
+    const login = JSON.parse(localStorage.getItem("login"));
+    const {handleUserLogin} = useContext(LoginContext);
+    useEffect(()=>{
+    if(login){
+      handleUserLogin(true);
+    }
+  },[])
 	return (<>
 	<div className={style.main} >
 		<p className={style.mainHeading} >

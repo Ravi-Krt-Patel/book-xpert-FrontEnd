@@ -1,7 +1,18 @@
 import style from "./About.module.css";
-import {Footer} from "../Footer/Footer"
-const About = ()=>{
+import {Footer} from "../Footer/Footer";
+import { useEffect } from "react";
+import { useContext } from "react";
+import { LoginContext } from "../ContextApi/LoginContext";
 
+const About = ()=>{
+	const user = JSON.parse(localStorage.getItem("userDetail"));
+    const login = JSON.parse(localStorage.getItem("login"));
+    const {handleUserLogin} = useContext(LoginContext);
+    useEffect(()=>{
+      if(login){
+      handleUserLogin(true);
+      }
+     },[])
 	return (<>
 	
 	<div className={style.container} >

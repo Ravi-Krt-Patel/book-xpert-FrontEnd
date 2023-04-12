@@ -123,7 +123,8 @@ import {
 					email:response.data.user.email,
 					contactNumber:!response.data.user.mobNumber?(""):(response.data.user.mobNumber),
 					country:!response.data.user.country?(""):(response.data.user.country),
-					image:!response.data.user.image?(""):(response.data.user.image)
+					image:!response.data.user.image?(""):(response.data.user.image),
+					role:response.data.user.role
 				  }));
 			  })
 			  .catch(function (error) {
