@@ -171,7 +171,7 @@ export const LoginDrawer = ()=>{
             <IconButton color="primary" aria-label="add to shopping cart">
               <KeyboardArrowDownIcon
                 id="resources-button"
-                onMouseEnter={handleAnchor}
+                onClick={handleAnchor}
                 aria-controls={open ? "resourse-menu" : undefined}
                 aria-haspopup="true"
                 aria-expanded={open ? "true" : undefined}
