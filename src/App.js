@@ -8,6 +8,7 @@ import {MobileNav} from "./components/NavBar/MobileNav";
 import { Route,Routes } from "react-router-dom";
 import Blogs from "./components/Blogs/Blogs";
 import UpdateUserProfile from "./components/Update-User-Profile/UpdateUserProfile"
+import {Protected} from "./components/Protection/Proctected"
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <Route path="/blogs" element={<Blogs/>} ></Route>
           <Route path="/services" element={<Services/>} ></Route>
           <Route path="/about" element={<About/>} ></Route>
-          <Route path="/profile" element={<UpdateUserProfile/>} ></Route>
+          <Route path="/profile" element={<Protected Component={UpdateUserProfile} />} ></Route>
       </Route>
       
       <Route path="/*" element={<div style={{alignItems:'center',textAlign:'center',padding:'20vw'}}>
